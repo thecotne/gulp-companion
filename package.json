@@ -1,0 +1,78 @@
+{
+  "name": "gulp-companion",
+  "description": "hide complexity from gulpfile",
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
+  "scripts": {
+    "lint": "eslint {src,spec}/**.js",
+    "test": "cross-env NODE_ENV=test nyc jasmine",
+    "test:lib": "cross-env JASMINE_TEST=lib jasmine",
+    "test:production": "npm run build:production && npm run test:lib",
+    "report-coverage": "nyc report --reporter=lcov",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "build": "babel src/index.js -o lib/index.js",
+    "build:production": "babel src/index.js -o lib/index.js",
+    "watch": "babel src/index.js -o lib/index.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thecotne/gulp-companion.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "cotne nazarashvili <cotne.nazarashvili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thecotne/gulp-companion/issues"
+  },
+  "homepage": "https://github.com/thecotne/gulp-companion#readme",
+  "dependencies": {
+    "del": "^2.2.2",
+    "glob": "^7.1.1",
+    "gulp-watch": "^4.3.10",
+    "merge-stream": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-istanbul": "^2.0.2",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "coveralls": "^2.11.14",
+    "cross-env": "^3.1.3",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.8.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "gulp": "^3.9.1",
+    "jasmine": "^2.5.2",
+    "nyc": "^8.3.1",
+    "semantic-release": "^4.3.5"
+  },
+  "peerDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "nyc": {
+    "include": [
+      "src/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}
