@@ -31,7 +31,10 @@
   },
   "homepage": "https://github.com/thecotne/gulp-companion#readme",
   "dependencies": {
+    "babel-plugin-istanbul": "^2.0.3",
     "del": "^2.2.2",
+    "eslint": "^3.8.1",
+    "eslint-plugin-promise": "^3.3.0",
     "glob": "^7.1.1",
     "gulp-watch": "^4.3.10",
     "merge-stream": "^1.0.0"
