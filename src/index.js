@@ -1,6 +1,5 @@
 const gulp = require.main.require('gulp')
-
-import gulpWatch from 'gulp-watch'
+const gulpWatch = require('gulp-watch')
 
 export del from 'del'
 export merge from 'merge-stream'
