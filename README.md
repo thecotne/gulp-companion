@@ -1,5 +1,7 @@
 # gulp-companion
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/gulp-companion.svg)](https://greenkeeper.io/)
+
 [![Package Quality](http://npm.packagequality.com/badge/gulp-companion.png)](http://packagequality.com/#?package=gulp-companion)
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
