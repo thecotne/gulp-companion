@@ -9,6 +9,7 @@
 [![NPM DevDependencies](https://img.shields.io/david/dev/thecotne/gulp-companion.svg?style=flat-square&maxAge=300)](https://david-dm.org/thecotne/gulp-companion?type=dev)
 [![NPM Downloads](https://img.shields.io/npm/dm/gulp-companion.svg?style=flat-square&maxAge=300)](https://www.npmjs.com/package/gulp-companion)
 [![NPM Package Version](https://img.shields.io/npm/v/gulp-companion.svg?style=flat-square&maxAge=300)](https://www.npmjs.com/package/gulp-companion)
+[![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/gulp-companion.svg)](https://greenkeeper.io/)
 
 hide complexity from gulpfile
 
