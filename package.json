@@ -15,7 +15,9 @@
     "build": "babel src/index.js -o lib/index.js",
     "build:production": "babel src/index.js -o lib/index.js",
     "watch": "babel src/index.js -o lib/index.js -w",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "gulp-watch": "^4.3.11",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "snyk": "^1.31.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -75,5 +78,6 @@
     ],
     "sourceMap": false,
     "instrument": false
-  }
+  },
+  "snyk": true
 }
