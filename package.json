@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/thecotne/gulp-companion#readme",
   "dependencies": {
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-node": "^5.0.0",
     "gulp-watch": "^4.3.11",
